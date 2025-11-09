@@ -73,7 +73,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/swastya-setu.git
+git clone https://github.com/Vandan160305/swastya-setu.git
 
 # Navigate to project directory
 cd swastya-setu
