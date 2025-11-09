@@ -1,0 +1,86 @@
+{
+  "name": "Doctor",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "The email of the user account associated with this doctor profile."
+    },
+    "name": {
+      "type": "string",
+      "description": "Doctor's full name"
+    },
+    "specialization": {
+      "type": "string",
+      "enum": [
+        "general_physician",
+        "cardiologist",
+        "dermatologist",
+        "pediatrician",
+        "orthopedic",
+        "neurologist",
+        "psychiatrist",
+        "gynecologist",
+        "ent_specialist",
+        "ophthalmologist"
+      ],
+      "description": "Doctor's area of specialization"
+    },
+    "qualification": {
+      "type": "string",
+      "description": "Doctor's qualifications"
+    },
+    "experience": {
+      "type": "number",
+      "description": "Years of experience"
+    },
+    "consultation_fee": {
+      "type": "number",
+      "description": "Consultation fee in INR"
+    },
+    "availability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Doctor's availability schedule"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Languages spoken by doctor"
+    },
+    "rating": {
+      "type": "number",
+      "default": 5,
+      "description": "Doctor's rating out of 5"
+    },
+    "total_consultations": {
+      "type": "number",
+      "default": 0,
+      "description": "Total consultations completed"
+    },
+    "profile_image": {
+      "type": "string",
+      "description": "Doctor's profile image URL"
+    }
+  },
+  "required": [
+    "user_email",
+    "name",
+    "specialization"
+  ]
+}

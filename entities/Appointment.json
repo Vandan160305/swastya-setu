@@ -1,0 +1,76 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "description": "Patient's user ID"
+    },
+    "doctor_id": {
+      "type": "string",
+      "description": "Doctor's ID"
+    },
+    "appointment_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of appointment"
+    },
+    "appointment_time": {
+      "type": "string",
+      "description": "Time of appointment"
+    },
+    "symptoms": {
+      "type": "string",
+      "description": "Patient's symptoms"
+    },
+    "consultation_type": {
+      "type": "string",
+      "enum": [
+        "video_call",
+        "voice_call",
+        "chat"
+      ],
+      "default": "video_call",
+      "description": "Type of consultation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending",
+      "description": "Appointment status"
+    },
+    "meeting_link": {
+      "type": "string",
+      "description": "Video call meeting link"
+    },
+    "prescription": {
+      "type": "string",
+      "description": "Doctor's prescription"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "failed"
+      ],
+      "default": "pending",
+      "description": "Payment status"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Consultation amount"
+    }
+  },
+  "required": [
+    "patient_id",
+    "doctor_id",
+    "appointment_date",
+    "appointment_time"
+  ]
+}

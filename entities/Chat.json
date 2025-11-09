@@ -1,0 +1,28 @@
+{
+  "name": "Chat",
+  "type": "object",
+  "properties": {
+    "appointment_id": {
+      "type": "string",
+      "description": "The ID of the appointment this chat belongs to."
+    },
+    "sender_id": {
+      "type": "string",
+      "description": "The user ID of the message sender."
+    },
+    "receiver_id": {
+      "type": "string",
+      "description": "The user ID of the message receiver."
+    },
+    "message": {
+      "type": "string",
+      "description": "The content of the message."
+    }
+  },
+  "required": [
+    "appointment_id",
+    "sender_id",
+    "receiver_id",
+    "message"
+  ]
+}

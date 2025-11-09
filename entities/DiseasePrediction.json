@@ -1,0 +1,40 @@
+{
+  "name": "DiseasePrediction",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "The ID of the user who made the prediction request."
+    },
+    "symptoms": {
+      "type": "string",
+      "description": "The symptoms provided by the user."
+    },
+    "predictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "next_steps": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "The list of potential diseases predicted by the AI."
+    }
+  },
+  "required": [
+    "user_id",
+    "symptoms",
+    "predictions"
+  ]
+}

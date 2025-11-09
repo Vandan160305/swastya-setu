@@ -1,0 +1,45 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "phone": {
+      "type": "string",
+      "description": "User's phone number"
+    },
+    "age": {
+      "type": "number",
+      "description": "User's age"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "other"],
+      "description": "User's gender"
+    },
+    "address": {
+      "type": "string",
+      "description": "User's address"
+    },
+    "city": {
+      "type": "string",
+      "description": "User's city"
+    },
+    "state": {
+      "type": "string",
+      "description": "User's state"
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": ["hindi", "english", "bengali", "tamil", "marathi", "gujarati", "kannada", "telugu", "malayalam", "punjabi"],
+      "default": "english",
+      "description": "User's preferred language"
+    },
+    "medical_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User's medical history"
+    }
+  },
+  "required": []
+}

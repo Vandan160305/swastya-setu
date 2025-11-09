@@ -1,0 +1,71 @@
+{
+  "name": "AIConsultation",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "User's ID"
+    },
+    "symptoms": {
+      "type": "string",
+      "description": "User's symptoms"
+    },
+    "conversation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "description": "Full conversation history"
+    },
+    "severity_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "emergency"
+      ],
+      "description": "Symptom severity assessed by AI"
+    },
+    "recommended_specialization": {
+      "type": "string",
+      "description": "Recommended doctor specialization"
+    },
+    "image_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs of uploaded images"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language of consultation"
+    },
+    "appointment_suggested": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether AI suggested booking an appointment"
+    }
+  },
+  "required": [
+    "user_id",
+    "symptoms"
+  ]
+}
